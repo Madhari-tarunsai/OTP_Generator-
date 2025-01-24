@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>otp_genarator</title>
+  </head>
+  <body>
+    <button onclick="demo()">Get_Opt</button>
+    <h1 id="otp" style="color: aliceblue;"></h1>
+    <script>
+      function demo() {
+        let x = Math.random() * 1000000;
+        let op = Math.floor(x);
+        let clr;
+        if (op < 100000) {
+          console.log(op);
+          clr = op + 100000;
+        } else {
+          clr = op;
+        }
+        document.body.style.backgroundColor = `#${clr}`;
+        let gen_otp = document.getElementById("otp");
+        gen_otp.innerHTML = clr
+      }
+    </script>
+  </body>
+</html>
